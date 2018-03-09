@@ -1,2 +1,2 @@
-# rosasyntylae.github.io
+# rosasynstylae.github.io
 Website
