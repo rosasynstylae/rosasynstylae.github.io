@@ -1,0 +1,132 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Molengo');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i');
+
+/* Styles */
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    
+    background: #FFFCF7;
+    
+    color: #252626;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 65px;
+}
+
+.parallax {
+    /* reusable parallax effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-image {
+    height: 100vh;
+    background-image: url('./images/wood.jpg');
+    
+    padding: 20px;
+}
+
+.header-info {
+    width: 50%;
+    height: calc(100% - 40px);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding: 20px;
+    
+    background-color: rgba(255, 255, 255, 0.65);
+    
+    text-align: right;
+    font-size: 30px;
+    font-family: 'Molengo', sans-serif;
+}
+
+.content-row {
+    height: 500px;
+    
+    padding: 20px;
+    
+    display: flex;
+    align-content: space-between;
+}
+
+.content-row:nth-child(even) {
+    background-color: #E4F0D0;
+}
+
+.content-row:nth-child(odd) {
+    background-color: #6e8f60;
+    color: #FFFCF7;
+    /*background-color: #BED8D4;*/
+}
+
+.left-content {
+    order: 1;
+    width: calc(50% + 40px);
+}
+
+.right-content {
+    order: 2;
+    width: calc(50% - 60px);
+    padding-left: 20px;
+}
+
+.content-img {
+    height: 100%;
+}
+
+.content-text div {
+    padding: 10px 0;
+}
+
+.content-row:nth-child(2) .content-img {
+    background-image: url('./images/geometric-1.jpg');
+}
+
+.content-row:nth-child(3) .content-img {
+    background-image: url('./images/geometric-3.jpg');
+}
+
+.content-row:nth-child(4) .content-img {
+    background-image: url('./images/geometric-2.jpg');
+}
+
+/* Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .content-row {
+        flex-direction: column;
+        height: auto;
+        
+        padding: 40px;
+    }
+    
+    .left-content, .right-content {
+        width: 100%;
+        
+        padding: 0;
+    }
+    
+    .content-img {
+        order: 1;
+        height: 300px;
+    }
+    
+    .content-text {
+        order: 2;
+    }
+}
