@@ -24,6 +24,19 @@ h1 {
     font-size: 65px;
 }
 
+a {
+    color: #19647E;
+    text-decoration: none;
+}
+
+a:hover {
+    font-style: italic;
+}
+
+ul {
+    padding-left: 55px;
+}
+
 .parallax {
     /* reusable parallax effect */
     background-attachment: fixed;
@@ -109,9 +122,40 @@ h1 {
 }
 
 /* Content Text */
-
 .content-text {
     order: 2;
+}
+
+.content-text div {
+    padding: 10px 0;
+}
+
+.content-text .lists {
+    padding-left: 40px
+}
+
+.lists h3:first-child {
+    margin-top: 0;
+}
+
+.contact-link {
+    display: block;
+}
+
+.link-list {
+    font-size: 30px;
+}
+
+.link-list a {
+    padding-bottom: 10px;
+}
+
+.social-link {
+    font-size: 50px;
+}
+
+.icon {
+    padding-right: 10px;
 }
 
 /* Desktop */
@@ -142,6 +186,10 @@ h1 {
         
         padding: 20px;
     }
+    
+    .long-content {
+        height: auto;
+    }
 
     /* Left/Right distinction */
     .left-content {
@@ -161,7 +209,11 @@ h1 {
     }
     
     /* Content Text */
-    .content-text div {
-        padding: 10px 0;
+    .link-list {
+        font-size: 20px;
+    }
+
+    .social-link {
+        font-size: 40px;
     }
 }
