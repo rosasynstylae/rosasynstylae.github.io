@@ -45,6 +45,7 @@ ul {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size:cover;
     position: static;
 }
 
@@ -54,6 +55,7 @@ ul {
     background-image: url('./images/wood-1280.jpg');
     
     background-position: center -250px;
+    -webkit-background-size: cover -250px;
     
     padding: 20px;
 }
@@ -167,6 +169,7 @@ ul {
     .header-image {
         height: calc(100vh - 40px);
         background-position: center;
+        -webkit-background-size: cover;
     }
 
     .header-info h1 {
