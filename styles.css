@@ -148,11 +148,8 @@ ul {
   /* Content */
   .content-row {
     flex-direction: row;
-    height: 500px;
+    min-height: 500px;
     padding: 20px; }
-
-  .long-content {
-    height: auto; }
 
   /* Left/Right distinction */
   .left-content {
