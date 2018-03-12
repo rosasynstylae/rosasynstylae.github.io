@@ -172,6 +172,18 @@ ul {
     padding-right: 10px;
 }
 
+/* Footer */
+
+.footer {
+    font-size: 12px;
+    text-align: center;
+    
+    padding: 10px;
+    border-top: 1px solid $text-color;
+    
+    background: $primary-row-color;
+}
+
 /* Desktop */
 @media only screen and (min-device-width : 700px) {
     .parallax {

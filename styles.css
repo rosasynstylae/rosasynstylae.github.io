@@ -125,6 +125,14 @@ ul {
 .icon {
   padding-right: 10px; }
 
+/* Footer */
+.footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #252626;
+  background: #e4f0d0; }
+
 /* Desktop */
 @media only screen and (min-device-width: 700px) {
   .parallax {
