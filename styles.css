@@ -1,224 +1,178 @@
+/*
+Copyright Katelyn Narum, 2018
+
+Licensed under CC BY-NC
+Human-Readable Terms here: https://creativecommons.org/licenses/by-nc/4.0/
+
+Contact the Programmer at: katenarum@gmail.com
+*/
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-@import url('https://fonts.googleapis.com/css?family=Molengo');
-@import url('https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i');
-
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import url("https://fonts.googleapis.com/css?family=Molengo");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i");
+/* Todo: Rewrite image stuff to use a mixin for -webkit-, ect extensions */
 /* Styles */
-/*html {*/
-/*    height: 100%;*/
-/*}*/
-
 body {
-    padding: 0;
-    margin: 0;
-    
-    background: #FFFCF7;
-    
-    color: #252626;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    
-    height: 100vh;
-}
+  padding: 0;
+  margin: 0;
+  background: #fffcf7;
+  color: #252626;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  height: 100vh; }
 
 h1 {
-    font-family: 'Poiret One', cursive;
-    font-size: 65px;
-}
+  font-family: 'Poiret One', cursive;
+  font-size: 65px; }
 
 a {
-    color: #19647E;
-    text-decoration: none;
-}
+  color: #19647e;
+  text-decoration: none; }
 
 a:hover {
-    font-style: italic;
-}
+  font-style: italic; }
 
 ul {
-    padding-left: 55px;
-}
+  padding-left: 55px; }
 
 .parallax {
-    /* reusable parallax effect */
-    background-attachment: scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: static;
-}
+  /* reusable parallax effect */
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: static; }
 
 /* Header */
 .header-image {
-    height: 75%;
-    background-image: url('./images/wood-1280.jpg');
-    
-    padding: 20px;
-}
+  height: 75%;
+  background-image: url("./images/wood-1280.jpg");
+  padding: 20px; }
 
 .header-info {
-    width: 50%;
-    height: calc(100% - 40px);
-    
-    display: flex;
-    flex-direction: column;
-    
-    padding: 20px;
-    
-    background-color: rgba(255, 255, 255, 0.65);
-    
-    text-align: right;
-    font-size: 40px;
-    font-family: 'Molengo', sans-serif;
-}
+  width: 50%;
+  height: calc(100% - 40px);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.65);
+  text-align: right;
+  font-size: 40px;
+  font-family: 'Molengo', sans-serif; }
 
 .info-bar .seperator {
-    display: none;
-}
+  display: none; }
 
 /* Content */
 .content-row {
-    padding: 40px;
-    
-    display: flex;
-    flex-direction: column;
-}
+  padding: 40px;
+  display: flex;
+  flex-direction: column; }
 
 .content-row:nth-child(even) {
-    background-color: #E4F0D0;
-}
+  background-color: #e4f0d0; }
 
 .content-row:nth-child(odd) {
-    background-color: #6e8f60;
-    color: #FFFCF7;
-}
+  background-color: #6e8f60;
+  color: #fffcf7; }
 
 /* Content Arrangement */
-
 /* Since this is mobile-first, there's no actual left/right destinction until
    bigger screens */
 .left-content, .right-content {
-    width: 100%;
-    
-    padding: 0;
-}
+  width: 100%;
+  padding: 0; }
 
 /* Content Images */
-  
 .content-img {
-    order: 1;
-    height: 300px;
-}
+  order: 1;
+  height: 300px; }
 
 .content-row:nth-child(2) .content-img {
-    background-image: url('./images/geometric-1.jpg');
-}
+  background-image: url("./images/geometric-1.jpg"); }
 
 .content-row:nth-child(3) .content-img {
-    background-image: url('./images/geometric-3.jpg');
-}
+  background-image: url("./images/geometric-3.jpg"); }
 
 .content-row:nth-child(4) .content-img {
-    background-image: url('./images/geometric-2.jpg');
-}
+  background-image: url("./images/geometric-2.jpg"); }
 
 /* Content Text */
 .content-text {
-    order: 2;
-}
+  order: 2; }
 
 .content-text div {
-    padding: 10px 0;
-}
+  padding: 10px 0; }
 
 .content-text .lists {
-    padding-left: 40px
-}
+  padding-left: 40px; }
 
 .lists h3:first-child {
-    margin-top: 0;
-}
+  margin-top: 0; }
 
 .contact-link {
-    display: block;
-}
+  display: block; }
 
 .link-list {
-    font-size: 30px;
-}
+  font-size: 30px; }
 
 .link-list a {
-    padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
 
 .social-link {
-    font-size: 50px;
-}
+  font-size: 50px; }
 
 .icon {
-    padding-right: 10px;
-}
+  padding-right: 10px; }
 
 /* Desktop */
-@media only screen and (min-device-width : 700px) {
-    .parallax {
-        background-attachment: fixed;
-    }
-    
-    /* Header */
-    .header-image {
-        height: calc(100vh - 40px);
-        background-position: center;
-    }
+@media only screen and (min-device-width: 700px) {
+  .parallax {
+    background-attachment: fixed; }
 
-    .header-info h1 {
-        margin-bottom: 10px;
-    }
-    
-    .info-bar {
-        display: flex;
-        justify-content: flex-end;
-    }
+  /* Header */
+  .header-image {
+    height: calc(100vh - 40px);
+    background-position: center; }
 
-    .info-bar .seperator {
-        display: block;
-    }
-    
-    /* Content */
-    .content-row {
-        flex-direction: row;
-        height: 500px;
-        
-        padding: 20px;
-    }
-    
-    .long-content {
-        height: auto;
-    }
+  .header-info h1 {
+    margin-bottom: 10px; }
 
-    /* Left/Right distinction */
-    .left-content {
-        order: 1;
-        width: calc(50% + 40px);
-    }
-    
-    .right-content {
-        order: 2;
-        width: calc(50% - 60px);
-        padding-left: 20px;
-    }
-    
-    /* Content Image */
-    .content-img {
-        height: 100%;
-    }
-    
-    /* Content Text */
-    .link-list {
-        font-size: 20px;
-    }
+  .info-bar {
+    display: flex;
+    justify-content: flex-end; }
 
-    .social-link {
-        font-size: 40px;
-    }
-}
+  .info-bar .seperator {
+    display: block; }
+
+  /* Content */
+  .content-row {
+    flex-direction: row;
+    height: 500px;
+    padding: 20px; }
+
+  .long-content {
+    height: auto; }
+
+  /* Left/Right distinction */
+  .left-content {
+    order: 1;
+    width: calc(50% + 40px); }
+
+  .right-content {
+    order: 2;
+    width: calc(50% - 60px);
+    padding-left: 20px; }
+
+  /* Content Image */
+  .content-img {
+    height: 100%; }
+
+  /* Content Text */
+  .link-list {
+    font-size: 20px; }
+
+  .social-link {
+    font-size: 40px; } }
+
+/*# sourceMappingURL=styles.css.map */
