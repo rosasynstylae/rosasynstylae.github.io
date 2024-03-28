@@ -6,16 +6,28 @@ Human-Readable Terms here: https://creativecommons.org/licenses/by-nc/4.0/
 
 Contact the Programmer at: samroseabbott@gmail.com
 */
+
 /* Fonts */
 @import url("https://fonts.googleapis.com/css?family=Poiret+One");
 @import url("https://fonts.googleapis.com/css?family=Molengo");
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,200i,400,400i,700,700i");
+
+:root {
+  --main-bg-color: #0d090a;
+  --main-text-color: #eaf2ef;
+  --link-color: #912f56;
+  --header-color: #521945;
+  --border-color: #3e8989;
+}
+
 /* Styles */
 body {
   padding: 0;
   margin: 0;
-  background: #fffcf7;
-  color: #252626;
+
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   height: 100vh;
@@ -27,7 +39,7 @@ h1 {
 }
 
 a {
-  color: #19647e;
+  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -61,12 +73,14 @@ ul {
   flex-direction: column;
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.65);
+
   text-align: right;
   font-size: 8vw;
   font-family: "Molengo", sans-serif;
+  color: var(--header-color);
 }
 
-.header-info h1 {
+.header h1 {
   font-size: 9vw;
 }
 
@@ -75,28 +89,39 @@ ul {
 }
 
 /* Content */
-.content-row {
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
+.content-grid {
+  display: grid;
+  grid-template-areas:
+    "content-1"
+    "content-2"
+    "content-3";
+  grid-template-columns: calc(100vw - 40px);
+  grid-auto-rows: min-content;
+
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.content-row:nth-child(even) {
-  background-color: #e4f0d0;
-}
-
-.content-row:nth-child(odd) {
-  background-color: #6e8f60;
-  color: #fffcf7;
+.content {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* Content Arrangement */
-/* Since this is mobile-first, there's no actual left/right destinction until
-   bigger screens */
-.left-content,
-.right-content {
-  width: 100%;
-  padding: 0;
+.content-1 {
+  grid-area: content-1;
+}
+
+.content-2 {
+  grid-area: content-2;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.content-3 {
+  grid-area: content-3;
+
+  border-top: 1px solid var(--border-color);
 }
 
 /* Content Images */
@@ -105,15 +130,15 @@ ul {
   height: 300px;
 }
 
-.content-row:nth-child(2) .content-img {
+.content-1 .content-img {
   background-image: url("./images/geometric-1.jpg");
 }
 
-.content-row:nth-child(3) .content-img {
+.content-2 .content-img {
   background-image: url("./images/geometric-3.jpg");
 }
 
-.content-row:nth-child(4) .content-img {
+.content-3 .content-img {
   background-image: url("./images/geometric-2.jpg");
 }
 
@@ -165,11 +190,12 @@ ul {
 
 /* Footer */
 .footer {
+  grid-area: footer;
+
   font-size: 12px;
   text-align: center;
   padding: 10px;
-  border-top: 1px solid #252626;
-  background: #e4f0d0;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Desktop */
@@ -190,10 +216,12 @@ ul {
   .header-image {
     height: calc(100vh - 40px);
     background-position: center;
+
+    padding-left: 3rem;
   }
 
   .header-info {
-    width: 50%;
+    width: calc(75vw - 5.5rem);
     font-size: 40px;
   }
 
@@ -211,31 +239,27 @@ ul {
   }
 
   /* Content */
-  .content-row {
-    flex-direction: row;
-    min-height: 500px;
-    padding: 20px;
+  .content-grid {
+    grid-template-areas:
+      "content-1 content-2"
+      "content-3 content-2";
+    grid-template-columns: calc(50vw - 4.5rem) calc(50vw - 4.5rem);
+
+    padding-left: 3rem;
+    padding-right: 3rem;
+    column-gap: 3rem;
+  }
+
+  .content {
+    margin: unset;
+  }
+
+  .content-2 {
+    border-top: none;
   }
 
   .content-text .lists {
     padding-left: 40px;
-  }
-
-  /* Left/Right distinction */
-  .left-content {
-    order: 1;
-    width: calc(50% + 40px);
-  }
-
-  .right-content {
-    order: 2;
-    width: calc(50% - 60px);
-    margin-left: 20px;
-  }
-
-  /* Content Image */
-  .content-img {
-    height: auto;
   }
 
   /* Content Text */
